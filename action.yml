@@ -1,0 +1,19 @@
+name: 'Uppercase'
+description: 'Convert text to Uppercase'
+author: 'suzucan2020'
+inputs:
+  text:
+    description: 'Text to be converted to uppercase'
+    required: true
+outputs:
+  uppercase-text:
+    descritpion: 'Text converted to uppercase'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.text }}
+branding:
+  icon: 'chevrons-up'
+  color: 'green'
+
