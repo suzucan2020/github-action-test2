@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2.0.0
       - id: uppercase
-          uses: ./
-          with:
-            text: Hello, World!
+        uses: ./
+        with:
+          text: Hello, World!
       - name: Print converted text
         run: echo "${{ steps.uppercase.outputs.uppercase-text }}"
